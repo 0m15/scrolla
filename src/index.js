@@ -7,16 +7,14 @@ class SmoothScrollComponent extends React.Component {
   _children = []
 
   renderedStyles = {
-    translationY: {
-      previous: 0,
-      current: 0,
-      ease: 0.1,
-      setValue: () => this.smoothScroll.scroll.y
-    }
+    previous: 0,
+    current: 0,
+    ease: 0.1,
+    setValue: () => this.smoothScroll.scroll.y
   }
 
   getRef = el => {
-    if (!el) return;
+    if (!el) return
 
     this.DOM = {
       el: el,
@@ -34,6 +32,7 @@ class SmoothScrollComponent extends React.Component {
 
   componentDidMount() {
     this.smoothScroll.attach(this.DOM)
+    this.smoothScroll.onResize()
   }
 
   componentWillUnmount() {
@@ -48,9 +47,7 @@ class SmoothScrollComponent extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps._key !== this.props._key) {
-      //setTimeout(() => {
       this.smoothScroll.reset()
-      //}, 1500)
     }
   }
 
@@ -62,12 +59,12 @@ class SmoothScrollComponent extends React.Component {
     this.smoothScroll.__removeChild(child)
   }
 
-  getScroll= () => {
+  getScroll = () => {
     return this.smoothScroll.scroll
   }
 
   getRenderedStyles = () => {
-    return this.smoothScroll.renderedStyles.translationY
+    return this.smoothScroll.renderedStyles
   }
 
   getViewport = () => {
@@ -100,9 +97,9 @@ class SmoothScrollComponent extends React.Component {
 
 const Smooth = {
   scroll: SmoothScrollComponent,
-  div: createScrollElement('div'),
-  img: createScrollElement('img'),
-  span: createScrollElement('span'),
+  div: createScrollElement("div"),
+  img: createScrollElement("img"),
+  span: createScrollElement("span")
 }
 
 export default Smooth

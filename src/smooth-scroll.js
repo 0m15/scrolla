@@ -3,7 +3,7 @@ import { lerp, map } from "./math"
 
 export default class SmoothScroll extends ScrollableChildren {
   viewport = { width: 0, height: 0 }
-  scroll = { x: 0, y: 0, height: 0, width: 0, }
+  scroll = { x: 0, y: 0, height: 0, width: 0 }
 
   constructor({ renderedStyles, getHeight }) {
     super()
@@ -57,13 +57,7 @@ export default class SmoothScroll extends ScrollableChildren {
   }
 
   setInitialStyle() {
-    // sets the initial value (no interpolation) - translate the scroll value
-    for (const key in this.renderedStyles) {
-      this.renderedStyles[key].current = this.renderedStyles[
-        key
-      ].previous = this.renderedStyles[key].setValue()
-    }
-    // translate the scrollable element
+    this.renderedStyles.current = this.renderedStyles.previous = this.renderedStyles.setValue()
     this.layout()
   }
 
@@ -71,7 +65,7 @@ export default class SmoothScroll extends ScrollableChildren {
     window.addEventListener("resize", this.onResize)
     window.addEventListener("scroll", this.onScroll)
   }
-  
+
   detachDOMEvents() {
     window.removeEventListener("resize", this.onResize)
     window.removeEventListener("scroll", this.onScroll)
@@ -89,21 +83,14 @@ export default class SmoothScroll extends ScrollableChildren {
     )
   }
 
-
-
   update() {
-    // scrollingSpeed = Math.abs(docScroll - lastScroll)
-    // lastScroll = docScroll
-
     // update the current and interpolated values
-    for (const key in this.renderedStyles) {
-      this.renderedStyles[key].current = this.renderedStyles[key].setValue()
-      this.renderedStyles[key].previous = lerp(
-        this.renderedStyles[key].previous,
-        this.renderedStyles[key].current,
-        this.renderedStyles[key].ease
-      )
-    }
+    this.renderedStyles.current = this.renderedStyles.setValue()
+    this.renderedStyles.previous = lerp(
+      this.renderedStyles.previous,
+      this.renderedStyles.current,
+      this.renderedStyles.ease
+    )
 
     // translate the scrollable element
     this.layout()
@@ -129,6 +116,6 @@ export default class SmoothScroll extends ScrollableChildren {
 
   layout() {
     this.DOM.scrollable.style.transform = `translate3d(0,${-1 *
-      this.renderedStyles.translationY.previous}px,0)`
+      this.renderedStyles.previous}px,0)`
   }
 }
