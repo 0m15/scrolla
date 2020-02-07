@@ -11,11 +11,11 @@ It has been built with this concepts in mind:
 - performances (styles rendered off react rendering system)
 - ease of use (just one callback prop to pass)
 
-# Installation
+## Installation
 
 Just `npm i scrollalo` or `yarn add scrollalo`.
 
-# Usage
+## Usage
 ```javascript
     import SmoothScroll from 'scrollalo'
 
@@ -37,6 +37,10 @@ Just `npm i scrollalo` or `yarn add scrollalo`.
 ```
 or just look at demo/index.html.
 
+
+## TODO
+
+- Add cubic-bezier support for easing support
 
 
 
