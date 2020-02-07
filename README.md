@@ -1,6 +1,6 @@
 # Scrollalo 🍭
 
-**Scrollalo** is a tiny react component to create smooth scrolling with interpolation, loosely based on this codrops article. 
+**Scrollalo** is a tiny react component to create smooth scrolling with interpolation, loosely based on this codrops example: https://github.com/codrops/SmoothScrollingImageEffects. 
 
 A live demo is available here: https://scrolla.netlify.com/
 
