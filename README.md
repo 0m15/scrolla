@@ -6,7 +6,7 @@ A live demo is available here: https://scrolla.netlify.com/
 
 It has been used on https://portadibasso.com, and then open sourced it.
 
-It has been built with these concepts in mind:
+It has been written with these concepts in mind:
 
 - ✨ Performance: it runs at 60fps on most devices and laptops I've tested. Styles are updated off the react render cycles
 - 🎈 Ease of use: It needs just one callback prop to update child styles
