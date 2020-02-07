@@ -1,23 +1,23 @@
-# Scrolla 🍭
+# Scrollalo 🍭
 
-Scrolla is a tiny reaact implementation of a smooth scroll component, loosely based on this codrops article. 
+**Scrollalo** is a tiny react component to create smooth scrolling with interpolation, loosely based on this codrops article. 
 
 A live demo is available here: https://scrolla.netlify.com/
 
-It has been used on portadibasso.com, and then open sourced it.
+It has been used on https://portadibasso.com, and then open sourced it.
 
 It has been built with this concepts in mind:
 
 - performances (styles rendered off react rendering system)
-- ease of use
+- ease of use (just one callback prop to pass)
 
 # Installation
 
-Just `npm i scrolla` or `yarn add scrolla`.
+Just `npm i scrollalo` or `yarn add scrollalo`.
 
 # Usage
 ```javascript
-    import SmoothScroll from 'scrolla'
+    import SmoothScroll from 'scrollalo'
 
     function layout({ el, styles }) {
         el.style.transform = `translate3d(0, ${styles.previous}px, 0)`

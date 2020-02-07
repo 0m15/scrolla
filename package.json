@@ -1,5 +1,5 @@
 {
-  "name": "scrolla",
+  "name": "scrollalo",
   "version": "1.0.0",
   "description": "🍭 A react component to smooth scrolling",
   "main": "./dist/index.js",
