@@ -44,10 +44,8 @@ export default function createScrollElement(Type) {
 
       // TODO: determine element visibility
       this.isVisible = true
-
       this.initEvents()
 
-      // add to smooth scroll instance
       this._smoothScroll.__addChild(this)
     }
 
@@ -77,10 +75,7 @@ export default function createScrollElement(Type) {
     resize() {
       //TODO: fix for iOS "false" resize event due to safari action bar show/hiding on scroll
 
-      // gets the item's height and top (relative to the document)
       this.getSize()
-
-      // reset styles
       this.setInitialStyles()
     }
 
