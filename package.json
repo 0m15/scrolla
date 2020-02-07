@@ -11,7 +11,7 @@
     "prepublish": "npm run build"
   },
   "keywords": [],
-  "author": "omis",
+  "author": "simonecarella@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
