@@ -6,10 +6,12 @@ A live demo is available here: https://scrolla.netlify.com/
 
 It has been used on https://portadibasso.com, and then open sourced it.
 
-It has been built with this concepts in mind:
+It has been built with these concepts in mind:
 
-- performances (styles rendered off react rendering system)
-- ease of use (just one callback prop to pass)
+- ✨ Performance: it runs at 60fps on most devices and laptops I've tested. Styles are updated off the react render cycles
+- 🎈 Ease of use: It needs just one callback prop to update child styles
+- 🗣 Explicit imperative styling: You completely define **how** to update the element, no implicit behavior, no new syntax to learn, just `el.style.transform = 'translate3d(0, ${value}px, 0)`
+- 👉 Convention: components which uses the `layout` update prop will receive an interpolated value as argument, which represents the distance from the viewport center of current child (a range [-1, 1]).
 
 ## Installation
 
