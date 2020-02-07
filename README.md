@@ -43,6 +43,7 @@ or just look at demo/index.html.
 ## TODO
 
 - Add cubic-bezier support for easing support
+- Add hooks usage/support
 
 
 
