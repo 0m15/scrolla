@@ -1,13 +1,13 @@
 {
   "name": "scrollalo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🍭 A react component to smooth scrolling",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx babel src --out-dir dist",
     "demo": "parcel ./demo/index.html --out-dir ./demo/public",
-    "demo:build": "parcel build ./demo/index.html --out-dir ./demo/public",
+    "demo:build": "npm run build && parcel build ./demo/index.html --out-dir ./demo/public",
     "prepublish": "npm run build"
   },
   "keywords": [],
