@@ -10,7 +10,7 @@ It has been written with these concepts in mind:
 
 - ✨ Performance: it runs at 60fps on most devices and laptops I've tested. Styles are updated off the react render cycles
 - 🎈 Ease of use: It needs just one callback prop to update child styles
-- 🗣 Explicit imperative styling: You completely define **how** to update the element, no implicit behavior, no new syntax to learn, just `el.style.transform = 'translate3d(0, ${value}px, 0)`
+- 🗣 Explicit imperative styling: You completely define **how** to update the element, no implicit behavior, no new syntax to learn, just `el.style.transform = 'scale3d(${value}px)`
 - 👉 Convention: components which uses the `layout` update prop will receive an interpolated value as argument, which represents the distance from the viewport center of current child (a range [-1, 1]).
 
 ## Installation
