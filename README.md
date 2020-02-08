@@ -14,7 +14,7 @@ It has been written with these concepts in mind:
 
 🗣 **Explicit imperative style updates**: You completely define **how** to update the element, no implicit behavior, no new syntax to learn, ie. just for example: `el.style.transform = 'scale3d(${value}px)`
 
-👉 **One simple convention**: components which uses the `layout` update prop will receive an interpolated value as argument, which represents the distance from the viewport center of current child (a range [-1, 1]). With that value you can animate pretty everything.
+👉 **One simple convention**: in the `layout` function prop you'll get the dom element and a `styles` object, containing the distance from the viewport center of the element in a range [-1, 1]. With that value you can animate pretty everything.
 
 ## Installation
 
